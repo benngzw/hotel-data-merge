@@ -22,7 +22,7 @@ export const acmeHotelsMock: AcmeHotel[] = [
   },
   {
     Id: "c3d4",
-    DestinationId: 5678,
+    DestinationId: 1234,
     Name: "Ocean View Resort",
     Latitude: null,
     Longitude: null,
@@ -71,7 +71,7 @@ export const expectedParsedAcmeHotels = [
   },
   {
     id: "c3d4",
-    destination_id: 5678,
+    destination_id: 1234,
     name: "Ocean View Resort",
     location: {
       lat: null,
