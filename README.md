@@ -207,3 +207,9 @@ curl -X POST "http://localhost:3000/update-hotels"
   "error": "Failed to update hotel data"
 }
 ```
+
+### Purging of Hotels
+
+A cron job will run at 00:00 GMT+8 to delete hotels that have not been updated for 3 days (configurable).
+
+This usually means that these hotels has not appeared in any of the suppliers' data for the past 2 days, hence will be purged to keep our database up to date.
