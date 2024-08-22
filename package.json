@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.3.0",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "axios": "^1.7.4",
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3"
+  },
+  "scripts": {
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "dev": "npx ts-node src/app.ts",
+    "test": "jest",
+    "mongo:up": "docker-compose -f deployment/docker-compose-mongo.yml --env-file .env up -d",
+    "mongo:down": "docker-compose -f deployment/docker-compose-mongo.yml --env-file .env down",
+    "docker:up": "docker-compose -f deployment/docker-compose.yml --env-file .env up -d",
+    "docker:down": "docker-compose -f deployment/docker-compose.yml --env-file .env down",
+    "docker:build": "docker build -t hotel-data-merge ."
+  }
+}
